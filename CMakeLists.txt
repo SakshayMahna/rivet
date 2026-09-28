@@ -10,3 +10,8 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
+option(RIVET_BUILD_EXPERIMENTS "Build experiment programs" ON)
+if(RIVET_BUILD_EXPERIMENTS)
+    add_subdirectory(experiments)
+endif()
