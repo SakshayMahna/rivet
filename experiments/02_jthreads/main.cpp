@@ -1,3 +1,8 @@
+// Experiment 02: std::jthread and cooperative cancellation with std::stop_token.
+// Two threads loop until asked to stop; observe that jthread joins automatically,
+// that stopping is not instant (a sleeping thread only notices after waking),
+// and that threads are destroyed in reverse order of declaration.
+
 #include <chrono>
 #include <iostream>
 #include <thread>

@@ -1,4 +1,8 @@
-#include <chrono>
+// Experiment 03: a data race on a shared counter.
+// Two threads increment the same int with no synchronisation; observe lost
+// updates in Debug, a misleadingly correct result in Release, and the race
+// reported by ThreadSanitizer (-DRIVET_ENABLE_TSAN=ON).
+
 #include <functional>
 #include <iostream>
 #include <thread>
@@ -9,7 +13,7 @@ void increment(int& counter) {
     for (int i = 0; i < num_iterations; ++i)
         ++counter;
 }
-} //namespace
+} // namespace
 
 int main() {
     int counter{0};

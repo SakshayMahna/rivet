@@ -142,14 +142,16 @@ Before building Rivet, create small standalone experiments.
 
 ```text
 experiments/
-├── threads/
-├── jthread/
-├── mutex/
-├── condition_variable/
-├── atomic/
-├── memory_order/
-└── race_conditions/
+├── 01_threads/
+├── 02_jthreads/
+├── 03_data_race/
+├── 04_mutex/
+├── 05_atomic/
+├── 06_condition_variable/
+└── 07_memory_order/
 ```
+
+Experiments are numbered in the order they are done, so each one can build on the previous.
 
 Learn:
 
@@ -720,11 +722,13 @@ rivet/
 ├── benchmarks/
 │
 ├── experiments/
-│   ├── threads/
-│   ├── mutex/
-│   ├── condition_variable/
-│   ├── atomics/
-│   └── memory_order/
+│   ├── 01_threads/
+│   ├── 02_jthreads/
+│   ├── 03_data_race/
+│   ├── 04_mutex/
+│   ├── 05_atomic/
+│   ├── 06_condition_variable/
+│   └── 07_memory_order/
 │
 ├── examples/
 │   ├── producer_consumer/
