@@ -1,0 +1,5 @@
+add_executable(exp_07_publishing_pattern publishing_pattern.cpp)
+target_link_libraries(exp_07_publishing_pattern PRIVATE Threads::Threads)
+
+add_executable(exp_07_store_buffering store_buffering.cpp)
+target_link_libraries(exp_07_store_buffering PRIVATE Threads::Threads)
