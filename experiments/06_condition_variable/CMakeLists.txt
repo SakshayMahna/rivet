@@ -1,0 +1,5 @@
+add_executable(exp_06_wait_strategies wait_strategies.cpp)
+target_link_libraries(exp_06_wait_strategies PRIVATE Threads::Threads)
+
+add_executable(exp_06_producer_consumer producer_consumer.cpp)
+target_link_libraries(exp_06_producer_consumer PRIVATE Threads::Threads)
